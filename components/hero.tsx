@@ -1,26 +1,56 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { profileData } from "@/data/profile";
 import { HeroConsole } from "./hero-console";
-import { ArrowRight, Mail, Compass, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Mail, Compass, MapPin, Sparkles, GraduationCap } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#FAF9F7]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Editorial & Technical Copy */}
+          {/* Left Column: Personal Identity & Technical Copy */}
           <div className="lg:col-span-7 space-y-6">
-            {/* Top Label Tag */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8EA] border border-[#E4DDE0] text-[#6D1F2B] font-mono text-xs tracking-wider uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#6D1F2B]" />
-              00 — {profileData.tagline}
+            {/* Prominent Author Card with Clear High-Visibility Portrait */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6 p-4 sm:p-5 rounded-2xl bg-[#FFFFFF] border border-[#E4DDE0] border-l-4 border-l-[#6D1F2B] shadow-sm shadow-[#351017]/5 w-fit">
+              {/* Natural High-Visibility Portrait Photo */}
+              <div className="relative w-28 h-36 sm:w-32 sm:h-40 md:w-36 md:h-44 rounded-xl overflow-hidden border border-[#E4DDE0] bg-[#FAF9F7] shrink-0 shadow-sm">
+                <Image
+                  src={profileData.photo}
+                  alt={profileData.name}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
+                  priority
+                />
+              </div>
+
+              {/* Name, Role & College hierarchy */}
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3E8EA] border border-[#E4DDE0] text-[#6D1F2B] font-mono text-xs tracking-wider uppercase font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#6D1F2B]" />
+                  00 — {profileData.tagline}
+                </div>
+
+                <div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#191719] tracking-tight">
+                    {profileData.name}
+                  </div>
+
+                  {/* College Info (Visually secondary) */}
+                  <div className="flex items-center gap-1.5 text-xs sm:text-sm text-[#625C5F] font-mono mt-1">
+                    <GraduationCap className="w-4 h-4 text-[#6D1F2B] shrink-0" />
+                    <span>{profileData.college}</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-[#191719] leading-[1.15]">
+            <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-[#191719] leading-[1.18]">
               Building intelligent systems that solve{" "}
               <span className="text-[#6D1F2B]">real problems.</span>
             </h1>

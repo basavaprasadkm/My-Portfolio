@@ -4,7 +4,7 @@ export interface JourneyItem {
   title: string;
   organization: string;
   location?: string;
-  period: string;
+  period?: string;
   description: string;
   highlights?: string[];
   techStack?: string[];
@@ -44,16 +44,9 @@ export const journeyData: JourneyItem[] = [
   {
     id: "journey-education",
     type: "education",
-    title: "Bachelor of Engineering (Computer Science / AI)",
-    organization: "University Engineering Institute",
-    location: "India",
-    period: "Graduated",
-    description:
-      "Deep focus on Algorithms, Data Structures, Machine Learning, Operating Systems, Database Management Systems, and Linear Algebra.",
-    highlights: [
-      "Published and demonstrated capstone projects in intelligent machine vision",
-      "Active participant in technical symposiums and developer hackathons",
-    ],
-    techStack: ["C++", "Python", "Data Structures", "Computer Architecture"],
+    title: "Education",
+    organization: "Rajeev Institute of Technology, Hassan",
+    location: "Hassan, India",
+    description: "Rajeev Institute of Technology, Hassan",
   },
 ];

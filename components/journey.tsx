@@ -45,10 +45,12 @@ export function Journey() {
                     </div>
 
                     <div className="flex items-center gap-3 text-xs font-mono text-[#8A8285]">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5 text-[#625C5F]" />
-                        {item.period}
-                      </span>
+                      {item.period && (
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3.5 h-3.5 text-[#625C5F]" />
+                          {item.period}
+                        </span>
+                      )}
                       {item.location && (
                         <span className="flex items-center gap-1 hidden sm:flex">
                           <MapPin className="w-3.5 h-3.5 text-[#625C5F]" />

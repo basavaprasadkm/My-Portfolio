@@ -2,7 +2,7 @@
 
 import React from "react";
 import { profileData } from "@/data/profile";
-import { Layers, Terminal, Sparkles, Binary, Wrench, ShieldCheck } from "lucide-react";
+import { Layers, Terminal, Sparkles, Binary, Wrench, ShieldCheck, GraduationCap } from "lucide-react";
 
 export function About() {
   return (
@@ -109,6 +109,17 @@ export function About() {
                     <span className="font-medium text-xs">Vector Pipelines</span>
                   </div>
                 </div>
+              </div>
+
+              {/* Education row */}
+              <div className="pt-2 border-t border-[#E4DDE0] flex items-center justify-between text-[11px] text-[#625C5F]">
+                <span className="text-[#6D1F2B] font-semibold uppercase text-[10px] tracking-wider flex items-center gap-1">
+                  <GraduationCap className="w-3 h-3 text-[#6D1F2B]" />
+                  EDUCATION:
+                </span>
+                <span className="text-[#191719] font-sans font-medium text-right truncate max-w-[200px]">
+                  {profileData.college}
+                </span>
               </div>
 
               <div className="pt-2 border-t border-[#E4DDE0] flex items-center justify-between text-[11px] text-[#625C5F]">

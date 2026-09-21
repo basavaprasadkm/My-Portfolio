@@ -1,6 +1,8 @@
 export interface Profile {
   name: string;
   role: string;
+  college: string;
+  photo: string;
   tagline: string;
   headline: string;
   subheadline: string;
@@ -23,6 +25,8 @@ export interface Profile {
 export const profileData: Profile = {
   name: "Basava Prasad KM",
   role: "AI Engineer",
+  college: "Rajeev Institute of Technology, Hassan",
+  photo: "/basava.png",
   tagline: "AI ENGINEER",
   headline: "Building intelligent systems that solve real problems.",
   subheadline:
