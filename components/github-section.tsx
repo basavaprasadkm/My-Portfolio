@@ -7,38 +7,55 @@ import { Star, GitFork, ArrowUpRight, Terminal, FolderGit2 } from "lucide-react"
 import { GithubIcon } from "./icons";
 
 // Clean default engineering repos when GitHub username is configured or pending sync
+// Real public engineering repositories provided by Basava Prasad KM
 const FALLBACK_REPOSITORIES = [
   {
-    name: "autonomous-rag-core",
-    description: "Hybrid dense-sparse retrieval and multi-agent reranking pipeline in Python & Qdrant.",
+    name: "evoting",
+    description: "E-voting using facial recognition biometric verification.",
+    language: "JavaScript",
+    stars: 0,
+    forks: 0,
+    url: "https://github.com/basavaprasadkm/evoting",
+  },
+  {
+    name: "deepfake-detector",
+    description: "Deep neural network for synthetic media and facial manipulation detection.",
     language: "Python",
     stars: 0,
     forks: 0,
-    url: "https://github.com/basavaprasadkm",
+    url: "https://github.com/basavaprasadkm/deepfake-detector",
   },
   {
-    name: "edge-vision-onnx",
-    description: "Spatial-attention CNN for real-time industrial anomaly detection on edge devices.",
-    language: "C++ / Python",
+    name: "virtual-mouse",
+    description: "AI virtual mouse and touchless gesture control using OpenCV and MediaPipe.",
+    language: "Python",
     stars: 0,
     forks: 0,
-    url: "https://github.com/basavaprasadkm",
+    url: "https://github.com/basavaprasadkm/virtual-mouse",
   },
   {
-    name: "neural-ast-search",
-    description: "AST-based code embedding engine and hierarchical semantic retrieval tool.",
-    language: "TypeScript",
+    name: "originality-checker-plagiarism-detection-",
+    description: "Originality and plagiarism detection system using NLP similarity algorithms.",
+    language: "Python",
     stars: 0,
     forks: 0,
-    url: "https://github.com/basavaprasadkm",
+    url: "https://github.com/basavaprasadkm/originality-checker-plagiarism-detection-",
   },
   {
-    name: "llm-eval-harness",
-    description: "Automated regression benchmarking and cost optimization suite for LLM pipelines.",
-    language: "TypeScript",
+    name: "City-Simulation",
+    description: "Interactive city simulation, urban grid modeling, and traffic flow engine.",
+    language: "JavaScript",
     stars: 0,
     forks: 0,
-    url: "https://github.com/basavaprasadkm",
+    url: "https://github.com/basavaprasadkm/City-Simulation",
+  },
+  {
+    name: "secure_e_voting",
+    description: "Secure electronic voting application with cryptographic authentication.",
+    language: "HTML",
+    stars: 0,
+    forks: 0,
+    url: "https://github.com/basavaprasadkm/secure_e_voting",
   },
 ];
 

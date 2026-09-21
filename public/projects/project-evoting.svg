@@ -1,0 +1,52 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#FAF9F7"/>
+  <rect x="0.5" y="0.5" width="799" height="449" stroke="#E4DDE0"/>
+  <defs>
+    <pattern id="grid-evoting" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="rgba(109, 31, 43, 0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid-evoting)"/>
+
+  <!-- Top Bar -->
+  <rect x="40" y="30" width="720" height="36" rx="6" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <circle cx="62" cy="48" r="4" fill="#6D1F2B" opacity="0.4"/>
+  <circle cx="76" cy="48" r="4" fill="#8A2C3B" opacity="0.6"/>
+  <circle cx="90" cy="48" r="4" fill="#6D1F2B" opacity="0.9"/>
+  <text x="110" y="52" fill="#625C5F" font-family="monospace" font-size="11">evoting // facial-biometric-auth-engine.js</text>
+  <text x="660" y="52" fill="#6D1F2B" font-family="monospace" font-size="11" font-weight="700">● LIVE POLLING</text>
+
+  <!-- Left: Facial Landmark Capture -->
+  <rect x="60" y="90" width="310" height="265" rx="8" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <rect x="75" y="105" width="115" height="20" rx="4" fill="#F3E8EA"/>
+  <text x="83" y="119" fill="#6D1F2B" font-family="monospace" font-size="10" font-weight="700">BIOMETRIC AUTH</text>
+  
+  <circle cx="215" cy="220" r="60" stroke="#6D1F2B" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="195" cy="205" r="5" fill="#6D1F2B"/>
+  <circle cx="235" cy="205" r="5" fill="#6D1F2B"/>
+  <path d="M 195 240 Q 215 255 235 240" stroke="#6D1F2B" stroke-width="2" fill="none"/>
+  <rect x="150" y="150" width="130" height="135" stroke="#8A2C3B" stroke-width="1" fill="rgba(109,31,43,0.03)" rx="4"/>
+  <text x="75" y="315" fill="#191719" font-family="monospace" font-size="11" font-weight="600">Landmarks: 68 points · 99.4% Match</text>
+  <text x="75" y="335" fill="#625C5F" font-family="monospace" font-size="10">Liveness verification: PASSED</text>
+
+  <!-- Right: Ballot Verification & Hashing -->
+  <rect x="400" y="90" width="340" height="265" rx="8" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <rect x="415" y="105" width="125" height="20" rx="4" fill="#F3E8EA"/>
+  <text x="423" y="119" fill="#6D1F2B" font-family="monospace" font-size="10" font-weight="700">BALLOT ENCRYPTION</text>
+  
+  <rect x="415" y="145" width="310" height="40" rx="4" fill="#FAF9F7" stroke="#E4DDE0"/>
+  <text x="425" y="170" fill="#625C5F" font-family="monospace" font-size="11">Voter Token: <tspan fill="#6D1F2B" font-weight="700">0x8f9c...4a12</tspan></text>
+
+  <rect x="415" y="200" width="310" height="40" rx="4" fill="#FAF9F7" stroke="#E4DDE0"/>
+  <text x="425" y="225" fill="#625C5F" font-family="monospace" font-size="11">Tamper Status: <tspan fill="#6D1F2B" font-weight="700">UNMODIFIED</tspan></text>
+
+  <rect x="415" y="255" width="310" height="40" rx="4" fill="#F3E8EA" stroke="#6D1F2B"/>
+  <text x="425" y="280" fill="#6D1F2B" font-family="monospace" font-size="11" font-weight="700">Cast Status: CONFIRMED &amp; RECORDED</text>
+
+  <!-- Bottom Metric Bar -->
+  <rect x="40" y="380" width="720" height="36" rx="6" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <text x="60" y="403" fill="#8A8285" font-family="monospace" font-size="11">PIPELINE METRICS:</text>
+  <text x="180" y="403" fill="#191719" font-family="monospace" font-size="11">Verification Latency: <tspan fill="#6D1F2B" font-weight="700">120ms</tspan></text>
+  <text x="390" y="403" fill="#191719" font-family="monospace" font-size="11">Duplicate Rejection: <tspan fill="#6D1F2B" font-weight="700">100%</tspan></text>
+  <text x="590" y="403" fill="#191719" font-family="monospace" font-size="11">Architecture: <tspan fill="#6D1F2B" font-weight="700">JS / OpenCV</tspan></text>
+</svg>

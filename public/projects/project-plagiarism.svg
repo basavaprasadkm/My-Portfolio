@@ -1,0 +1,57 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#FAF9F7"/>
+  <rect x="0.5" y="0.5" width="799" height="449" stroke="#E4DDE0"/>
+  <defs>
+    <pattern id="grid-plagiarism" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="rgba(109, 31, 43, 0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid-plagiarism)"/>
+
+  <!-- Top Bar -->
+  <rect x="40" y="30" width="720" height="36" rx="6" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <circle cx="62" cy="48" r="4" fill="#6D1F2B" opacity="0.4"/>
+  <circle cx="76" cy="48" r="4" fill="#8A2C3B" opacity="0.6"/>
+  <circle cx="90" cy="48" r="4" fill="#6D1F2B" opacity="0.9"/>
+  <text x="110" y="52" fill="#625C5F" font-family="monospace" font-size="11">originality-checker // nlp-semantic-ngram-analyzer.py</text>
+  <text x="660" y="52" fill="#6D1F2B" font-family="monospace" font-size="11" font-weight="700">● 10k DOCS/SEC</text>
+
+  <!-- Left: Cosine Similarity Metric -->
+  <rect x="60" y="90" width="310" height="265" rx="8" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <rect x="75" y="105" width="130" height="20" rx="4" fill="#F3E8EA"/>
+  <text x="83" y="119" fill="#6D1F2B" font-family="monospace" font-size="10" font-weight="700">SIMILARITY SCORE</text>
+  
+  <text x="75" y="180" fill="#6D1F2B" font-family="system-ui, sans-serif" font-size="44" font-weight="800">12.4%</text>
+  <text x="75" y="205" fill="#191719" font-family="system-ui, sans-serif" font-size="14" font-weight="700">High Originality (87.6% Unique)</text>
+  
+  <rect x="75" y="230" width="280" height="10" rx="5" fill="#F3F0EE"/>
+  <rect x="75" y="230" width="35" height="10" rx="5" fill="#6D1F2B"/>
+
+  <text x="75" y="280" fill="#625C5F" font-family="monospace" font-size="11">Matched Shingles: 3 / 240</text>
+  <text x="75" y="300" fill="#625C5F" font-family="monospace" font-size="11">TF-IDF Vector Cosine: 0.124</text>
+  <text x="75" y="320" fill="#625C5F" font-family="monospace" font-size="11">Corpus Scan: 14,800 records</text>
+
+  <!-- Right: Shingle Matching Heatmap -->
+  <rect x="400" y="90" width="340" height="265" rx="8" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <rect x="415" y="105" width="125" height="20" rx="4" fill="#F3E8EA"/>
+  <text x="423" y="119" fill="#6D1F2B" font-family="monospace" font-size="10" font-weight="700">TEXT ANALYSIS</text>
+  
+  <rect x="415" y="140" width="310" height="36" rx="4" fill="#FAF9F7" stroke="#E4DDE0"/>
+  <text x="425" y="163" fill="#625C5F" font-family="monospace" font-size="11">Tokenization: Stemming + Lemmatization</text>
+
+  <rect x="415" y="185" width="310" height="36" rx="4" fill="#FAF9F7" stroke="#E4DDE0"/>
+  <text x="425" y="208" fill="#625C5F" font-family="monospace" font-size="11">Jaccard 4-Gram Shingle Indexing</text>
+
+  <rect x="415" y="230" width="310" height="36" rx="4" fill="#FAF9F7" stroke="#E4DDE0"/>
+  <text x="425" y="253" fill="#625C5F" font-family="monospace" font-size="11">Levenshtein Edit Distance Matrix</text>
+
+  <rect x="415" y="275" width="310" height="36" rx="4" fill="#F3E8EA" stroke="#6D1F2B"/>
+  <text x="425" y="298" fill="#6D1F2B" font-family="monospace" font-size="11" font-weight="700">Plagiarism Report: Generated in 42ms</text>
+
+  <!-- Bottom Metric Bar -->
+  <rect x="40" y="380" width="720" height="36" rx="6" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <text x="60" y="403" fill="#8A8285" font-family="monospace" font-size="11">NLP PIPELINE:</text>
+  <text x="180" y="403" fill="#191719" font-family="monospace" font-size="11">Language: <tspan fill="#6D1F2B" font-weight="700">Python / NLTK</tspan></text>
+  <text x="390" y="403" fill="#191719" font-family="monospace" font-size="11">Precision: <tspan fill="#6D1F2B" font-weight="700">99.1%</tspan></text>
+  <text x="560" y="403" fill="#191719" font-family="monospace" font-size="11">Speed: <tspan fill="#6D1F2B" font-weight="700">FastAPI Async</tspan></text>
+</svg>

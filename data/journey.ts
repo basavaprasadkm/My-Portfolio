@@ -17,7 +17,6 @@ export const journeyData: JourneyItem[] = [
     title: "AI Engineer",
     organization: "AI Systems Engineering & Research",
     location: "India",
-    period: "2024 — Present",
     description:
       "Designing and architecting applied AI workflows, LLM orchestration pipelines, and fine-tuned domain models. Emphasizing low latency, deterministic reasoning outputs, and scalable backend infrastructure.",
     highlights: [
@@ -32,7 +31,7 @@ export const journeyData: JourneyItem[] = [
     title: "AI & Software Engineering Intern",
     organization: "Technology Solutions",
     location: "India",
-    period: "2023 — 2024",
+    period: "2026",
     description:
       "Collaborated on building machine learning pipelines, preprocessing tabular and unstructured text data, training baseline models, and containerizing inference microservices.",
     highlights: [

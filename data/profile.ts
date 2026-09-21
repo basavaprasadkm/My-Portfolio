@@ -48,8 +48,8 @@ export const profileData: Profile = {
     "Computer Vision & Multimodal",
     "High-Performance Backend Systems",
   ],
-  githubUsername: "YOUR_GITHUB_USERNAME", // e.g. "basavaprasadkm"
-  linkedinUrl: "YOUR_LINKEDIN_URL",
-  xUrl: "YOUR_X_URL",
+  githubUsername: "basavaprasadkm",
+  linkedinUrl: "https://linkedin.com/in/basavaprasadkm",
+  xUrl: "https://x.com/basavaprasadkm",
   resumeUrl: "#contact",
 };

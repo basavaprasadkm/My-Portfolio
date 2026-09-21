@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 
 const FILTER_CATEGORIES = [
   "All",
-  "LLM / GenAI",
   "Computer Vision",
-  "Full-Stack AI",
   "ML Systems",
+  "Full-Stack AI",
+  "Web Applications",
 ] as const;
 
 export function Projects() {
