@@ -8,7 +8,7 @@ const PIPELINE_STEPS = [
   {
     step: "01",
     name: "INPUT STREAM",
-    detail: "User query & multimodal context tensor",
+    detail: "User prompt & multimodal context tensor",
     metric: "32 tokens · text/plain",
     icon: Terminal,
   },
@@ -43,21 +43,21 @@ export function HeroConsole() {
     if (!isLive) return;
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % PIPELINE_STEPS.length);
-    }, 2800);
+    }, 3000);
     return () => clearInterval(interval);
   }, [isLive]);
 
   return (
-    <div className="w-full rounded-2xl bg-[#0F1117] border border-white/10 shadow-2xl shadow-black/80 overflow-hidden font-mono text-xs">
+    <div className="w-full rounded-2xl bg-[#FFFFFF] border border-[#E4DDE0] shadow-xl shadow-[#351017]/5 overflow-hidden font-mono text-xs">
       {/* Console Top Bar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[#14161F] border-b border-white/5">
+      <div className="flex items-center justify-between px-4 py-3 bg-[#F3F0EE] border-b border-[#E4DDE0]">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-500/60" />
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#6D1F2B]/30" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#8A2C3B]/40" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#6D1F2B]" />
           </div>
-          <span className="text-zinc-500 text-[11px] ml-2 font-mono">
+          <span className="text-[#625C5F] text-[11px] ml-2 font-mono">
             ai_pipeline_orchestrator.py
           </span>
         </div>
@@ -65,17 +65,17 @@ export function HeroConsole() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setIsLive(!isLive)}
-            className="flex items-center gap-1.5 text-[10px] text-zinc-400 hover:text-white px-2 py-0.5 rounded bg-white/5 border border-white/5 transition-colors"
+            className="flex items-center gap-1.5 text-[10px] text-[#625C5F] hover:text-[#191719] px-2 py-0.5 rounded bg-white border border-[#E4DDE0] transition-colors"
           >
             <span
               className={cn(
                 "w-1.5 h-1.5 rounded-full",
-                isLive ? "bg-emerald-400 animate-pulse" : "bg-zinc-500"
+                isLive ? "bg-[#6D1F2B] animate-pulse" : "bg-[#8A8285]"
               )}
             />
             {isLive ? "AUTO-LOOP" : "PAUSED"}
           </button>
-          <span className="text-zinc-500 text-[11px] hidden sm:inline">
+          <span className="text-[#8A8285] text-[11px] hidden sm:inline">
             v2.4.0-prod
           </span>
         </div>
@@ -98,18 +98,18 @@ export function HeroConsole() {
                 className={cn(
                   "p-2.5 rounded-xl border text-left transition-all relative overflow-hidden group",
                   isActive
-                    ? "bg-[#181B26] border-sky-500/50 shadow-sm shadow-sky-500/10"
-                    : "bg-[#11131B] border-white/5 hover:border-white/10 opacity-70 hover:opacity-100"
+                    ? "bg-[#F3E8EA] border-[#6D1F2B] shadow-sm"
+                    : "bg-[#FAF9F7] border-[#E4DDE0] hover:border-[#A45A66] opacity-80 hover:opacity-100"
                 )}
               >
                 {isActive && (
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-sky-400 to-transparent" />
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#6D1F2B]" />
                 )}
-                <div className="flex items-center justify-between text-[10px] text-zinc-500 mb-1">
-                  <span>NODE {item.step}</span>
-                  <Icon className={cn("w-3.5 h-3.5", isActive ? "text-sky-400" : "text-zinc-600")} />
+                <div className="flex items-center justify-between text-[10px] text-[#8A8285] mb-1">
+                  <span className={isActive ? "text-[#6D1F2B] font-semibold" : ""}>NODE {item.step}</span>
+                  <Icon className={cn("w-3.5 h-3.5", isActive ? "text-[#6D1F2B]" : "text-[#8A8285]")} />
                 </div>
-                <div className={cn("font-medium truncate text-[11px]", isActive ? "text-white" : "text-zinc-300")}>
+                <div className={cn("font-medium truncate text-[11px]", isActive ? "text-[#191719] font-semibold" : "text-[#625C5F]")}>
                   {item.name}
                 </div>
               </button>
@@ -118,40 +118,40 @@ export function HeroConsole() {
         </div>
 
         {/* Dynamic Execution Stage Inspector */}
-        <div className="p-4 rounded-xl bg-[#090A0E] border border-white/5 space-y-3">
-          <div className="flex items-center justify-between text-zinc-400 text-[11px]">
-            <span className="flex items-center gap-1.5 text-sky-400 font-semibold">
+        <div className="p-4 rounded-xl bg-[#FAF9F7] border border-[#E4DDE0] space-y-3">
+          <div className="flex items-center justify-between text-[#625C5F] text-[11px]">
+            <span className="flex items-center gap-1.5 text-[#6D1F2B] font-semibold">
               <Activity className="w-3.5 h-3.5 animate-pulse" />
               STAGE: {PIPELINE_STEPS[activeStep].name}
             </span>
-            <span className="text-zinc-500">
+            <span className="text-[#8A8285] font-mono">
               {PIPELINE_STEPS[activeStep].metric}
             </span>
           </div>
 
-          <p className="text-zinc-300 text-xs leading-relaxed font-sans">
+          <p className="text-[#191719] text-xs leading-relaxed font-sans font-medium">
             {PIPELINE_STEPS[activeStep].detail}
           </p>
 
           {/* Terminal stream log snippet */}
-          <div className="pt-2 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-500">
+          <div className="pt-2 border-t border-[#E4DDE0] flex items-center justify-between text-[11px] text-[#625C5F]">
             <span className="truncate">
-              <span className="text-emerald-400">basava@ai-core</span>:
-              <span className="text-sky-400">~/inference</span>$ run_benchmark --stage={activeStep + 1}
+              <span className="text-[#6D1F2B] font-semibold">basava@ai-core</span>:
+              <span className="text-[#8A2C3B]">~/inference</span>$ run_benchmark --stage={activeStep + 1}
             </span>
-            <span className="text-emerald-400 text-[10px] ml-2 shrink-0">
+            <span className="text-[#6D1F2B] font-semibold text-[10px] ml-2 shrink-0">
               ✓ 200 OK
             </span>
           </div>
         </div>
 
         {/* Footer Technical Note */}
-        <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-zinc-500 pt-1">
-          <span className="flex items-center gap-1">
-            <ArrowRight className="w-3 h-3 text-sky-400" />
+        <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#8A8285] pt-1">
+          <span className="flex items-center gap-1 text-[#625C5F]">
+            <ArrowRight className="w-3 h-3 text-[#6D1F2B]" />
             Deterministic verification pipeline
           </span>
-          <span className="font-mono text-zinc-600">
+          <span className="font-mono text-[#8A8285]">
             Latencies: [18ms, 84ms, 142ms]
           </span>
         </div>

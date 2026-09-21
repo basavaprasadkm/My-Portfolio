@@ -1,51 +1,51 @@
 <svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#0E1015"/>
-  <rect x="0.5" y="0.5" width="799" height="449" stroke="rgba(255,255,255,0.08)"/>
+  <rect width="800" height="450" fill="#FAF9F7"/>
+  <rect x="0.5" y="0.5" width="799" height="449" stroke="#E4DDE0"/>
   
   <defs>
-    <pattern id="grid-vision" width="25" height="25" patternUnits="userSpaceOnUse">
-      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    <pattern id="grid-vision-burgundy" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="rgba(109, 31, 43, 0.04)" stroke-width="1"/>
     </pattern>
   </defs>
-  <rect width="800" height="450" fill="url(#grid-vision)"/>
+  <rect width="800" height="450" fill="url(#grid-vision-burgundy)"/>
 
   <!-- Top Bar -->
-  <rect x="40" y="35" width="720" height="36" rx="6" fill="#141721" stroke="rgba(255,255,255,0.08)"/>
-  <circle cx="62" cy="53" r="4" fill="#EF4444" opacity="0.7"/>
-  <circle cx="76" cy="53" r="4" fill="#F59E0B" opacity="0.7"/>
-  <circle cx="90" cy="53" r="4" fill="#10B981" opacity="0.7"/>
-  <text x="110" y="57" fill="#71717A" font-family="monospace" font-size="11">edge-vision-inference // spatial-attention-cnn.onnx</text>
-  <text x="660" y="57" fill="#10B981" font-family="monospace" font-size="11">● 60 FPS EDGE</text>
+  <rect x="40" y="35" width="720" height="36" rx="6" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <circle cx="62" cy="53" r="4" fill="#6D1F2B" opacity="0.4"/>
+  <circle cx="76" cy="53" r="4" fill="#8A2C3B" opacity="0.6"/>
+  <circle cx="90" cy="53" r="4" fill="#6D1F2B" opacity="0.9"/>
+  <text x="110" y="57" fill="#625C5F" font-family="monospace" font-size="11">edge-vision-inference // spatial-attention-cnn.onnx</text>
+  <text x="650" y="57" fill="#6D1F2B" font-family="monospace" font-size="11" font-weight="700">● 60 FPS EDGE</text>
 
   <!-- Left: Simulated Camera Frame with Anomaly Bounding Box -->
-  <rect x="60" y="100" width="340" height="250" rx="8" fill="#141721" stroke="rgba(255,255,255,0.1)"/>
+  <rect x="60" y="100" width="340" height="250" rx="8" fill="#FFFFFF" stroke="#E4DDE0"/>
   <!-- Target Grid in Camera -->
-  <circle cx="230" cy="225" r="70" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" stroke-dasharray="4 4"/>
-  <circle cx="230" cy="225" r="40" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1"/>
-  <circle cx="230" cy="225" r="3" fill="#38BDF8"/>
+  <circle cx="230" cy="225" r="70" stroke="rgba(109, 31, 43, 0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+  <circle cx="230" cy="225" r="40" stroke="rgba(109, 31, 43, 0.3)" stroke-width="1"/>
+  <circle cx="230" cy="225" r="3" fill="#6D1F2B"/>
   
   <!-- Bounding box with detection -->
-  <rect x="180" y="160" width="100" height="90" rx="2" stroke="#EF4444" stroke-width="1.5" fill="rgba(239, 68, 68, 0.08)"/>
-  <rect x="180" y="142" width="95" height="18" fill="#EF4444" rx="2"/>
-  <text x="185" y="155" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="700">MICRO-FRACTURE 98.4%</text>
+  <rect x="180" y="160" width="100" height="90" rx="2" stroke="#6D1F2B" stroke-width="1.5" fill="rgba(109, 31, 43, 0.06)"/>
+  <rect x="180" y="142" width="105" height="18" fill="#6D1F2B" rx="2"/>
+  <text x="185" y="155" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="700">MICRO-DEFECT 98.4%</text>
 
   <!-- Right: Tensor Layers & Attention Map -->
-  <rect x="430" y="100" width="310" height="250" rx="8" fill="#181B26" stroke="rgba(255,255,255,0.08)"/>
-  <text x="450" y="130" fill="#E4E4E7" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Spatial Attention Tensor Map</text>
+  <rect x="430" y="100" width="310" height="250" rx="8" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <text x="450" y="130" fill="#191719" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Spatial Attention Tensor Map</text>
   
-  <rect x="450" y="150" width="270" height="34" rx="4" fill="#0F1117" stroke="rgba(255,255,255,0.05)"/>
-  <text x="462" y="172" fill="#38BDF8" font-family="monospace" font-size="11">Conv2D [3, 64, 7x7] -> ReLU</text>
+  <rect x="450" y="150" width="270" height="34" rx="4" fill="#FAF9F7" stroke="#E4DDE0"/>
+  <text x="462" y="172" fill="#6D1F2B" font-family="monospace" font-size="11" font-weight="600">Conv2D [3, 64, 7x7] -> ReLU</text>
   
-  <rect x="450" y="195" width="270" height="34" rx="4" fill="#0F1117" stroke="rgba(255,255,255,0.05)"/>
-  <text x="462" y="217" fill="#38BDF8" font-family="monospace" font-size="11">SpatialAttnBlock [64, 128]</text>
+  <rect x="450" y="195" width="270" height="34" rx="4" fill="#FAF9F7" stroke="#E4DDE0"/>
+  <text x="462" y="217" fill="#6D1F2B" font-family="monospace" font-size="11" font-weight="600">SpatialAttnBlock [64, 128]</text>
 
-  <rect x="450" y="240" width="270" height="34" rx="4" fill="#0F1117" stroke="rgba(255,255,255,0.05)"/>
-  <text x="462" y="262" fill="#38BDF8" font-family="monospace" font-size="11">ONNX Quantized Int8 Engine</text>
+  <rect x="450" y="240" width="270" height="34" rx="4" fill="#F3E8EA" stroke="#6D1F2B"/>
+  <text x="462" y="262" fill="#6D1F2B" font-family="monospace" font-size="11" font-weight="700">ONNX Quantized Int8 Engine</text>
 
   <!-- Bottom Bar -->
-  <rect x="40" y="380" width="720" height="34" rx="6" fill="#12141D" stroke="rgba(255,255,255,0.05)"/>
-  <text x="60" y="402" fill="#71717A" font-family="monospace" font-size="11">SYSTEM METRICS:</text>
-  <text x="180" y="402" fill="#F4F4F5" font-family="monospace" font-size="11">Compute: <tspan fill="#38BDF8">ONNX / CUDA</tspan></text>
-  <text x="360" y="402" fill="#F4F4F5" font-family="monospace" font-size="11">Frame Time: <tspan fill="#10B981">16.2ms</tspan></text>
-  <text x="540" y="402" fill="#F4F4F5" font-family="monospace" font-size="11">False Positive: <tspan fill="#38BDF8">&lt; 0.05%</tspan></text>
+  <rect x="40" y="380" width="720" height="34" rx="6" fill="#FFFFFF" stroke="#E4DDE0"/>
+  <text x="60" y="402" fill="#8A8285" font-family="monospace" font-size="11">SYSTEM METRICS:</text>
+  <text x="180" y="402" fill="#191719" font-family="monospace" font-size="11">Compute: <tspan fill="#6D1F2B" font-weight="700">ONNX / CUDA</tspan></text>
+  <text x="360" y="402" fill="#191719" font-family="monospace" font-size="11">Frame Time: <tspan fill="#6D1F2B" font-weight="700">16.2ms</tspan></text>
+  <text x="540" y="402" fill="#191719" font-family="monospace" font-size="11">False Positive: <tspan fill="#625C5F">&lt; 0.05%</tspan></text>
 </svg>
