@@ -1,0 +1,76 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0E1015"/>
+  <rect x="0.5" y="0.5" width="799" height="449" stroke="rgba(255,255,255,0.08)"/>
+  
+  <!-- Subtle Grid -->
+  <defs>
+    <pattern id="grid-rag" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="grad-rag" x1="100" y1="50" x2="700" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid-rag)"/>
+  <circle cx="400" cy="225" r="280" fill="url(#grad-rag)"/>
+
+  <!-- Architecture Nodes -->
+  <!-- Top Bar / Terminal Header -->
+  <rect x="40" y="35" width="720" height="36" rx="6" fill="#141721" stroke="rgba(255,255,255,0.08)"/>
+  <circle cx="62" cy="53" r="4" fill="#EF4444" opacity="0.7"/>
+  <circle cx="76" cy="53" r="4" fill="#F59E0B" opacity="0.7"/>
+  <circle cx="90" cy="53" r="4" fill="#10B981" opacity="0.7"/>
+  <text x="110" y="57" fill="#71717A" font-family="monospace" font-size="11">rag-knowledge-engine // hybrid-dense-sparse-retriever.ts</text>
+  <text x="680" y="57" fill="#38BDF8" font-family="monospace" font-size="11">● LIVE</text>
+
+  <!-- Node 1: Corpus / Query Input -->
+  <rect x="60" y="140" width="180" height="170" rx="8" fill="#141721" stroke="rgba(56, 189, 248, 0.25)"/>
+  <rect x="75" y="160" width="70" height="18" rx="4" fill="rgba(56, 189, 248, 0.15)"/>
+  <text x="83" y="173" fill="#38BDF8" font-family="monospace" font-size="10">INPUT CORPUS</text>
+  <text x="75" y="205" fill="#E4E4E7" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Domain Documents</text>
+  <text x="75" y="225" fill="#71717A" font-family="monospace" font-size="10">Chunks: 14,200</text>
+  <text x="75" y="243" fill="#71717A" font-family="monospace" font-size="10">Embedding: Text-004</text>
+  <text x="75" y="261" fill="#71717A" font-family="monospace" font-size="10">Sparse: BM25+</text>
+  <rect x="75" y="280" width="150" height="6" rx="3" fill="#27272A"/>
+  <rect x="75" y="280" width="120" height="6" rx="3" fill="#0284C7"/>
+
+  <!-- Connection Line 1 -> 2 -->
+  <path d="M 240 225 L 305 225" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="305,225 297,220 297,230" fill="#38BDF8"/>
+
+  <!-- Node 2: Vector Search & Hybrid Re-ranking -->
+  <rect x="310" y="115" width="200" height="220" rx="8" fill="#181B26" stroke="rgba(56, 189, 248, 0.4)"/>
+  <rect x="325" y="135" width="85" height="18" rx="4" fill="rgba(56, 189, 248, 0.2)"/>
+  <text x="333" y="148" fill="#38BDF8" font-family="monospace" font-size="10">HYBRID RERANKER</text>
+  <text x="325" y="180" fill="#F4F4F5" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Qdrant + Reciprocal Rank</text>
+  
+  <rect x="325" y="200" width="170" height="28" rx="4" fill="#0F1117" stroke="rgba(255,255,255,0.06)"/>
+  <text x="335" y="218" fill="#A1A1AA" font-family="monospace" font-size="11">dense_similarity: 0.942</text>
+  
+  <rect x="325" y="236" width="170" height="28" rx="4" fill="#0F1117" stroke="rgba(255,255,255,0.06)"/>
+  <text x="335" y="254" fill="#A1A1AA" font-family="monospace" font-size="11">sparse_bm25: 18.72</text>
+  
+  <rect x="325" y="272" width="170" height="28" rx="4" fill="#0F1117" stroke="rgba(255,255,255,0.06)"/>
+  <text x="335" y="290" fill="#10B981" font-family="monospace" font-size="11">latency: 48ms [cached]</text>
+
+  <!-- Connection Line 2 -> 3 -->
+  <path d="M 510 225 L 575 225" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="575,225 567,220 567,230" fill="#38BDF8"/>
+
+  <!-- Node 3: Agentic Reasoning Output -->
+  <rect x="580" y="140" width="170" height="170" rx="8" fill="#141721" stroke="rgba(56, 189, 248, 0.25)"/>
+  <rect x="595" y="160" width="70" height="18" rx="4" fill="rgba(16, 185, 129, 0.15)"/>
+  <text x="603" y="173" fill="#10B981" font-family="monospace" font-size="10">SYNTHESIS</text>
+  <text x="595" y="205" fill="#E4E4E7" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Contextual Answer</text>
+  <text x="595" y="225" fill="#71717A" font-family="monospace" font-size="10">Hallucination check: ✓</text>
+  <text x="595" y="243" fill="#71717A" font-family="monospace" font-size="10">Sources cited: 4 docs</text>
+  <text x="595" y="261" fill="#71717A" font-family="monospace" font-size="10">Confidence: 99.1%</text>
+
+  <!-- Bottom Metric Bar -->
+  <rect x="40" y="380" width="720" height="34" rx="6" fill="#12141D" stroke="rgba(255,255,255,0.05)"/>
+  <text x="60" y="402" fill="#71717A" font-family="monospace" font-size="11">PIPELINE METRICS:</text>
+  <text x="180" y="402" fill="#F4F4F5" font-family="monospace" font-size="11">Total Latency: <tspan fill="#38BDF8">184ms</tspan></text>
+  <text x="360" y="402" fill="#F4F4F5" font-family="monospace" font-size="11">Tokens/sec: <tspan fill="#38BDF8">112.4</tspan></text>
+  <text x="540" y="402" fill="#F4F4F5" font-family="monospace" font-size="11">Self-Reflection: <tspan fill="#10B981">PASSED</tspan></text>
+</svg>

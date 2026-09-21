@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #FAF9F7;
+    --bg-secondary: #F3F0EE;
+    --bg-card: #FFFFFF;
+    
+    --text-primary: #191719;
+    --text-secondary: #625C5F;
+    --text-muted: #8A8285;
+    
+    --burgundy-primary: #6D1F2B;
+    --burgundy-secondary: #8A2C3B;
+    --burgundy-wine: #4A1720;
+    --burgundy-dark: #351017;
+    --burgundy-muted: #A45A66;
+    --burgundy-light: #F3E8EA;
+    --burgundy-soft: #E8CDD2;
+    --burgundy-accent: #D9A7AE;
+
+    --border-primary: #E4DDE0;
+    --border-dark: #321319;
+    --border-hover: #6D1F2B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #6D1F2B;
+    selection-color: #FFFFFF;
+  }
+
+  ::selection {
+    background-color: #6D1F2B;
+    color: #FFFFFF;
+  }
+}
+
+/* Editorial subtle paper / fine grid background */
+.bg-warm-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(109, 31, 43, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(109, 31, 43, 0.035) 1px, transparent 1px);
+}
+
+.bg-burgundy-glow {
+  background: radial-gradient(
+    circle at 80% 15%,
+    rgba(109, 31, 43, 0.05) 0%,
+    transparent 45%
+  );
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF9F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D39AA4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6D1F2B;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,36 @@
+<svg width="800" height="560" viewBox="0 0 800 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="560" fill="#0C0E14" rx="8"/>
+  <rect x="12" y="12" width="776" height="536" rx="6" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5"/>
+  <rect x="24" y="24" width="752" height="512" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+
+  <!-- Watermark / Background subtle seal -->
+  <circle cx="400" cy="270" r="160" stroke="rgba(56, 189, 248, 0.03)" stroke-width="32"/>
+
+  <!-- Header -->
+  <text x="400" y="80" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="12" letter-spacing="4">DEEPLEARNING.AI &amp; COURSERA</text>
+  <text x="400" y="110" text-anchor="middle" fill="#71717A" font-family="system-ui, sans-serif" font-size="11" letter-spacing="2">CERTIFICATE OF SPECIALIZATION</text>
+
+  <!-- Awarded to -->
+  <text x="400" y="170" text-anchor="middle" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="14">This is to certify that</text>
+  <text x="400" y="220" text-anchor="middle" fill="#F4F4F5" font-family="system-ui, sans-serif" font-size="30" font-weight="700">Basava Prasad KM</text>
+  <line x1="260" y1="235" x2="540" y2="235" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5"/>
+
+  <!-- Details -->
+  <text x="400" y="275" text-anchor="middle" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="14">has successfully completed the 5-course specialization in</text>
+  <text x="400" y="315" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Deep Learning Specialization</text>
+
+  <!-- Courses included -->
+  <text x="400" y="360" text-anchor="middle" fill="#71717A" font-family="monospace" font-size="11">Neural Networks &amp; Deep Learning · Hyperparameter Tuning · CNNs · Sequence Models</text>
+
+  <!-- Footer Seal & IDs -->
+  <rect x="60" y="440" width="200" height="50" rx="4" fill="#141721" stroke="rgba(255,255,255,0.06)"/>
+  <text x="75" y="460" fill="#71717A" font-family="monospace" font-size="9">ISSUED BY</text>
+  <text x="75" y="478" fill="#E4E4E7" font-family="system-ui, sans-serif" font-size="12" font-weight="600">DeepLearning.AI</text>
+
+  <circle cx="400" cy="465" r="24" fill="#141721" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="400" y="469" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="9">VERIFIED</text>
+
+  <rect x="540" y="440" width="200" height="50" rx="4" fill="#141721" stroke="rgba(255,255,255,0.06)"/>
+  <text x="555" y="460" fill="#71717A" font-family="monospace" font-size="9">CREDENTIAL ID</text>
+  <text x="555" y="478" fill="#38BDF8" font-family="monospace" font-size="11">CERT-DL-89421</text>
+</svg>
